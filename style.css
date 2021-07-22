@@ -1,0 +1,123 @@
+.app-container {
+    padding-left: 132px;
+  }
+  
+  .dots {
+    width: 20px;
+    position: fixed;
+    top: 32px;
+    left: 66px;
+  }
+  
+  .dot {
+    width: 16px;
+    height: 1px;
+    background: black;
+    margin-bottom: 8px;
+  }
+  
+  .card-container {
+    display: flex;
+    overflow-x: scroll;
+  }
+  
+  .card {
+    min-width: 300px;
+    height: 450px;
+    background: black;
+    position: relative;
+    overflow: hidden;
+    margin: 0 20px;
+  }
+  
+  .card:first-of-type{
+    margin-left: 0;
+  }
+  
+  .card:last-of-type{
+    margin-right: 0;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .card .hover-text {
+    position: absolute;
+    bottom: 0;
+    background: #313131;
+    color: white;
+    padding: 30px;
+    box-sizing: border-box;
+    transition: 0.5s ease-in-out;
+    width: 50%;
+    height: 25%;
+  }
+  
+  .headline {
+    margin-bottom: 32px;
+  }
+  
+  .card:hover .hover-text {
+    height: 100%;
+    width: 100%;
+    background: rgba(49,49,49, 0.5);
+  }
+  
+  .card .content, .card button {
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s 0.3s;
+    transform: translatey(50px);
+  }
+
+  .card.card button{
+    color:white;
+    background-color: green;
+  }
+  
+  .card:hover .content, .card:hover button {
+    visibility: visible;
+    opacity: 1;
+    transform: translatey(0px);
+  }
+
+  .hover image{
+      display: flex;
+      justify-content: space-between;
+  }
+  .galary-image{
+    display: flex;
+    justify-content: space-around;
+  }
+  .card{
+      margin-bottom:0px;
+      width: 350px;
+      height: 350px;
+      border-radius: 28px;
+  }
+
+  .galary{
+      background-image:url(./images/background.jpg) ;
+      background-repeat: none;
+      background-size: cover;
+      background-position: center;
+  }
+
+  @media screen and (max-width : 768px){
+    .galary-image{
+        display: block;
+        justify-content: initial;
+      }
+    .card{
+        width: 90%;
+        height: 350px;
+        border-radius: 28px;
+        margin-left: 10px;
+       
+    }
+  }
